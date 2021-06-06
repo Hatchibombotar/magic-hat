@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Magic Hat</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="./css/light.css" media="(prefers-color-scheme: light)">
+</head>
+
+<body>
+    <img src="./icon.png" width="100px" height="100px">
+    <h1 class="nomarginpadding">Magic Hat</h1>
+    <p class="hides">Pick something out of a hat!</p>
+
+    <button class="hides" onclick="addName()">+</button> <input class="hides" type="text" id="text"> <input class="hides" min="1" value="1" type="number" id="number">
+    <script src=./index.js></script>
+    <strong class="hides">Things in the hat:</strong>
+    <div id="theHat" class="hides"></div>
+    <a class="hides" href="./index.html"><p>Reset</p></a>
+    <button class="start-button hides" onclick="openHat()">Pick things out of the hat!</button>
+
+    <h2 id="element-text"></h2>
+
+    <button id="next-button" class="start-button hidden" onclick="next()">Next</button>
+    <button id="continue-button" class="start-button hidden" onclick="showNextElement()">View next Element</button>
+</body>
+</html>
