@@ -4,7 +4,7 @@ var hatObject = {}
 function addName() {
     var text = document.getElementById("text").value
     var number = document.getElementById("number").value
-    
+
     hatObject[text] = number
 
     repeat(function () {
@@ -15,11 +15,6 @@ function addName() {
         hatText.setAttribute("class", "nomarginpadding")
         document.getElementById("theHat").appendChild(hatText)
     }, number);
-}
-
-function repeat(func, times) {
-    func();
-    times && --times && repeat(func, times);
 }
 
 function openHat() {
@@ -60,25 +55,15 @@ function next() {
     document.getElementById("continue-button").classList.remove("hidden")
 }
 
-window.onload = function() {
-    var urlHatObject = getUrlVars()
-    var hatKeys = Object.keys(urlHatObject);
-    for (i of hatKeys) {
-        repeat(function () {
-            theHat.push(i)
-    
-            var hatText = document.createElement("p")
-            hatText.appendChild(document.createTextNode(i))
-            hatText.setAttribute("class", "nomarginpadding")
-            document.getElementById("theHat").appendChild(hatText)
-        }, urlHatObject[i]);
-    }
-}
+var urlHatObject = getUrlVars()
+var hatKeys = Object.keys(urlHatObject);
+for (i of hatKeys) {
+    repeat(function () {
+        theHat.push(i)
 
-function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
-        vars[key] = value;
-    });
-    return vars;
+        var hatText = document.createElement("p")
+        hatText.appendChild(document.createTextNode(i))
+        hatText.setAttribute("class", "nomarginpadding")
+        document.getElementById("theHat").appendChild(hatText)
+    }, urlHatObject[i]);
 }

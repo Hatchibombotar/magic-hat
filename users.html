@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Magic Hat</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <a href="./index.html"><img src="./icon.png" width="100px" height="100px"></a>
+    <h1 class="nomarginpadding">Magic Hat</h1>
+    <p>Pick something out of a hat!</p>
+
+    <div id="config">
+        <button onclick="addName()">+</button> <input type="text" id="text"> <input min="1" value="1" type="number"
+            id="number">
+
+        <strong>Things in the hat:</strong>
+        <div id="theHat"></div>
+
+        <strong>Players:</strong>
+        <button onclick="addPlayer()">+</button> <input type="text" id="playerName">
+        <div id="playerContainer"></div>
+
+        <a onclick="window.location.reload()" href="#">
+            <p>Reset</p>
+        </a>
+        
+        <button class="start-button" onclick="openHat()">Pick things out of the hat!</button>
+
+    </div>
+
+    <p id="player-text"></p>
+
+    <h2 id="element-text"></h2>
+
+    <button id="next-button" class="start-button hidden" onclick="next()">Next Player</button>
+    <button id="continue-button" class="start-button hidden" onclick="showNextElement()">View Element</button>
+    <script src="js/index.js"></script>
+    <script src="js/users.js"></script>
+</body>
+
+</html>
