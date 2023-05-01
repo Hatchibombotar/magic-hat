@@ -1,1 +1,0 @@
-start msedge.exe /k http://127.0.0.1:2001/ && python -m http.server 2001

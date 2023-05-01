@@ -1,23 +1,17 @@
 <!DOCTYPE html>
-<html>
-
-<head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" type="image/ico" href="/src/logo.png" />
     <title>Magic Hat</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="./icon.png" type="image/x-icon">
+    <meta name="color-scheme" content="dark">
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
 
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-
-<body>
-    <a href="./index.html"><img src="./icon.png" width="100px" height="100px"></a>
-    <h1 class="nomarginpadding">Magic Hat</h1>
-    <p class="hides">Pick something out of a hat!</p>
-
-    <button class="menu-button" onclick="window.location.href = 'classic.html'"><h1>Classic</h1>Pick items out of the hat, one by one</button>
-    <br>
-    <button class="menu-button"  onclick="window.location.href = 'users.html'"><h1>Users</h1>Good for multiple rounds, calls users one by one</button>
-</body>
-
+    <script src="/src/index.tsx" type="module"></script>
+  </body>
 </html>
