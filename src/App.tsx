@@ -21,7 +21,7 @@ const App: Component = () => {
           </div>
         </Show>
         <div class="h-12 mx-1 bg-slate-700 flex flex-row items-center w-fit rounded-md">
-          <img src={logo} class="p-1 h-12" alt="logo" />
+          <img src={logo} class="p-1 h-12 w-12" alt="logo" />
           <h1 class='m-1 p-1 font-semibold text-white'>Magic Hat</h1>
         </div>
       </header>
@@ -46,7 +46,7 @@ const App: Component = () => {
 const Home: Component = () => {
   const navigate = useNavigate()
   return <div class="p-2">
-    <p>Add items to a hat and take them out in a random order.</p>
+    <p class="text-white">Add items to a hat and take them out in a random order.</p>
     <div class="bg-white text-black mx-1 my-4 py-2 px-4 rounded-md border border-transparent cursor-pointer" onclick={() => navigate("/classic")}>
       <h2 class="font-medium">Classic</h2>
       <p>Pick items out of the hat one by one.</p>
